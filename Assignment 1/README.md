@@ -41,7 +41,7 @@ A sample output from the Python script is shown below:
 
 **/Output/HW1-1.png**
 
-![HW1-1](/Output/HW1-1.png)
+![HW1-1](Output/HW1-1.png)
 
 ---
 
