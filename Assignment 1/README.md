@@ -60,10 +60,10 @@ User interaction assumptions:
 The following example outputs from the Python script and web app are included in this repository:
 
 - **/Output/HW1-1.png**  
-  ![HW1-1](/Output/HW1-1.png)
+  ![HW1-1](Output/HW1-1.png)
 
 - **/Output/HW1-2.png**  
-  ![HW1-2](/Output/HW1-2.png)
+  ![HW1-2](Output/HW1-2.png)
 
 ---
 
