@@ -11,10 +11,12 @@ Below are the images used, the final results, and the full explanation of the pr
 The following images were captured using a regular camera in **landscape mode** and serve as inputs to the stitching pipeline.
 
 ### 📥 Input Frames
-<img src="Part-1/images/photo_5827707215912045578_y.jpg" width="160">
-<img src="Part-1/images/photo_5827707215912045579_y.jpg" width="160">
-<img src="Part-1/images/photo_5827707215912045580_y.jpg" width="160">
-<img src="Part-1/images/photo_5827707215912045581_y.jpg" width="160">
+<p float="left">
+  <img src="Part-1/images/photo_5827707215912045578_y.jpg" width="160" />
+  <img src="Part-1/images/photo_5827707215912045579_y.jpg" width="160" />
+  <img src="Part-1/images/photo_5827707215912045580_y.jpg" width="160" />
+  <img src="Part-1/images/photo_5827707215912045581_y.jpg" width="160" />
+</p>
 
 These four frames provide enough overlap to compute feature correspondences and estimate homographies.
 
