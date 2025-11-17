@@ -35,10 +35,10 @@ This part implements a full image stitching pipeline using:
 
 ### 🖼 Output Panorama  
 **Final stitched panorama:**  
-<img src="output_panorama.png" width="650">
+<img src="Part-1/output_panorama.png" width="650">
 
 ### 📱 Phone Panorama (Comparison)  
-<img src="phone_panorama.jpg" width="650">
+<img src="Part-1/phone_panorama.jpg" width="650">
 
 ---
 
