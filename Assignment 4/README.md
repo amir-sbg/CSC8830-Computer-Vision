@@ -17,10 +17,10 @@ The template images are taken from **completely different scenes**, not cropped 
 
 Below are examples of the test images used:
 
-<img src="Assignment 4/Part-1/images/photo_5827707215912045578_y.jpg" width="300">
-<img src="Assignment 4/Part-1/images/photo_5827707215912045579_y.jpg" width="300">
-<img src="Assignment 4/Part-1/images/photo_5827707215912045580_y.jpg" width="300">
-<img src="Assignment 4/Part-1/images/photo_5827707215912045581_y.jpg" width="300">
+<img src="Part-1/images/photo_5827707215912045578_y.jpg" width="100">
+<img src="Part-1/images/photo_5827707215912045579_y.jpg" width="100">
+<img src="Part-1/images/photo_5827707215912045580_y.jpg" width="100">
+<img src="Part-1/images/photo_5827707215912045581_y.jpg" width="100">
 
 ---
 
@@ -35,10 +35,10 @@ This part implements a full image stitching pipeline using:
 
 ### 🖼 Output Panorama  
 **Final stitched panorama:**  
-<img src="Assignment 4/Part-1/output_panorama.png" width="650">
+<img src="output_panorama.png" width="650">
 
 ### 📱 Phone Panorama (Comparison)  
-<img src="Assignment 4/Part-1/phone_panorama.jpg" width="650">
+<img src="phone_panorama.jpg" width="650">
 
 ---
 
