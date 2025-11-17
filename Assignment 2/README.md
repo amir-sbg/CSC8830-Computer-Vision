@@ -32,10 +32,13 @@ Some of the object templates used:
 
 Example scene images where objects are detected:
 
-- `Part-1/scenes/5819145774133087418.jpg`  
-- `Part-1/scenes/5819145774133087421.jpg`  
-- `Part-1/scenes/5819145774133087422.jpg`  
-- `Part-1/scenes/5819145774133087426.jpg`  
+
+<p float="left">
+  <img src="Part-1/scenes/5819145774133087418.jpg"   width="160" />
+  <img src="Part-1/scenes/5819145774133087421.jpg"   width="160" />
+  <img src="Part-1/scenes/5819145774133087422.jpg"     width="160" />
+  <img src="Part-1/scenes/5819145774133087426.jpg" width="160" />
+</p>
 
 ---
 
