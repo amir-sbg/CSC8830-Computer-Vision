@@ -1,5 +1,5 @@
 # CSC8830-Computer-Vision Homework 3
-## Part 2 — SIFT From Scratch + RANSAC + OpenCV SIFT Comparison
+## Part 1 — SIFT From Scratch + RANSAC + OpenCV SIFT Comparison
 
 In this part we **implement SIFT feature extraction from scratch** and use it for
 feature matching and homography estimation. The pipeline includes:
