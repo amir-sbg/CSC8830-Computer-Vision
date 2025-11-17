@@ -61,6 +61,99 @@ The phone’s stitching tends to apply stronger blending, exposure correction, a
 The Python implementation focuses on algorithm correctness and manual feature-based alignment.
 
 ---
+# 🔍 Assignment – Part 2: SIFT From Scratch + RANSAC + Comparison with OpenCV
 
-# 📁 Repository Structure
+This section implements a **complete SIFT feature extraction pipeline from scratch**, including:
+
+- Gaussian Pyramid  
+- Difference-of-Gaussians (DoG)  
+- Keypoint detection (3D extrema)  
+- Orientation assignment  
+- 128-D SIFT descriptor construction  
+- Feature matching  
+- RANSAC for homography estimation  
+- Comparison with OpenCV’s built-in SIFT  
+
+The goal is to demonstrate understanding of the SIFT algorithm and evaluate performance relative to the official implementation.
+
+---
+
+# 📥 Input Images
+
+Below are the two images used for feature extraction, matching, and homography estimation:
+
+<img src="Part-2/data/im1.png" width="250">
+<img src="Part-2/data/im2.png" width="250">
+
+These two views contain overlapping regions, making them ideal for SIFT-based correspondence matching.
+
+---
+
+# ⚙️ SIFT From Scratch — Pipeline Overview
+
+Our custom SIFT implementation follows the original Lowe (2004) algorithm:
+
+### 🧱 1. **Scale-Space Construction**
+- Gaussian Pyramid with multiple octaves  
+- Progressive blurring using different σ values  
+
+### 🔍 2. **DoG Pyramid (Difference of Gaussians)**
+- Subtract neighboring Gaussian levels  
+- Creates a scale-normalized blob detector  
+
+### ✏️ 3. **Keypoint Detection**
+- Find extrema in a 3×3×3 neighborhood  
+- Apply contrast threshold  
+- Remove edge responses using Hessian ratio test  
+
+### 🧭 4. **Orientation Assignment**
+- Build gradient orientation histogram around keypoint  
+- Dominant orientation defines rotation invariance  
+
+### 🧰 5. **128-D Descriptor**
+- 4×4 spatial grid  
+- 8 orientation bins per grid  
+- Total: 4×4×8 = 128 values  
+
+### 🔗 6. **Feature Matching**
+- Euclidean distance in descriptor space  
+- Lowe's ratio test  
+
+### 🧪 7. **RANSAC Optimization**
+- Estimate homography robustly  
+- Remove mismatched correspondences  
+
+---
+
+# 🔬 Feature Matching Results
+
+## 🟦 OpenCV SIFT (Baseline)
+OpenCV’s SIFT implementation produces the following matches:
+
+<img src="Part-2/opencv_matches.png" width="700">
+
+---
+
+## 🟥 Our SIFT Implementation (From Scratch)
+Feature matches produced by the custom SIFT + RANSAC pipeline:
+
+<img src="Part-2/ours_matches.png" width="700">
+
+---
+
+# 📊 Comparison + Observations
+
+- **OpenCV SIFT** detects more keypoints and produces denser matches.  
+- **Our SIFT implementation**:
+  - Correctly identifies stable keypoints  
+  - Produces valid matches after RANSAC  
+  - Shows fewer but meaningful correspondences  
+- Some differences arise due to:
+  - Simplifications in Gaussian scale-space  
+  - Different gradient thresholds  
+  - Smoothing or numerical precision  
+- Despite being built from scratch, the results are **qualitatively comparable** to OpenCV.
+
+---
+
 
