@@ -1,4 +1,4 @@
-# Assignment 4 – Template Matching (Correlation) & Panorama Stitching
+# Assignment 4 - Part 1: Template Matching (Correlation) & Panorama Stitching
 
 ## Part 1 — Object Detection Using Template Matching (Correlation)
 
