@@ -1,45 +1,66 @@
-# Assignment 4 - Part 1: Template Matching (Correlation) & Panorama Stitching
+# 📸 Assignment – Image Stitching (Panorama Construction)
 
-## Part 1 — Object Detection Using Template Matching (Correlation)
-
-This part demonstrates **object detection using Template Matching through correlation**.  
-The template images are taken from **completely different scenes**, not cropped from the test images.
-
-### ✔️ Completed Tasks
-- Implemented correlation-based template matching  
-- Evaluated **10 different objects**  
-- Templates are from different scenes  
-- Detection results visualized  
+This repository implements **image stitching using feature-based homography** and compares the result with a **mobile phone panorama**.  
+A minimum of **4 landscape** or **8 portrait** images must be used.  
+Below are the images used, the final results, and the full explanation of the process.
 
 ---
 
-## 📥 Input Images
+# Part 1 — Input Images (Captured Manually)
 
-Below are examples of the test images used:
+The following images were captured using a regular camera in **landscape mode** and serve as inputs to the stitching pipeline.
 
-<img src="Part-1/images/photo_5827707215912045578_y.jpg" width="100">
-<img src="Part-1/images/photo_5827707215912045579_y.jpg" width="100">
-<img src="Part-1/images/photo_5827707215912045580_y.jpg" width="100">
-<img src="Part-1/images/photo_5827707215912045581_y.jpg" width="100">
+### 📥 Input Frames
+<img src="Part-1/images/photo_5827707215912045578_y.jpg" width="160">
+<img src="Part-1/images/photo_5827707215912045579_y.jpg" width="160">
+<img src="Part-1/images/photo_5827707215912045580_y.jpg" width="160">
+<img src="Part-1/images/photo_5827707215912045581_y.jpg" width="160">
+
+These four frames provide enough overlap to compute feature correspondences and estimate homographies.
 
 ---
 
-## Part 2 — Image Stitching (Homography-based Panorama)
+# Part 2 — Image Stitching (Homography-Based Panorama)
 
-This part implements a full image stitching pipeline using:
+This part implements a **complete panorama stitching pipeline** consisting of:
 
-- SIFT feature extraction  
+- SIFT feature detection  
+- Descriptor extraction  
 - Feature matching  
-- RANSAC-based homography estimation  
-- Warping + blending to produce a panorama  
+- RANSAC to estimate homography  
+- Warping & blending to create a seamless panorama  
 
-### 🖼 Output Panorama  
-**Final stitched panorama:**  
-<img src="Part-1/output_panorama.png" width="650">
+### 🧵 Stitching Overview  
+The algorithm follows these steps:
 
-### 📱 Phone Panorama (Comparison)  
-<img src="Part-1/phone_panorama.jpg" width="650">
+1. **Detect features** in all images  
+2. **Match keypoints** between consecutive images  
+3. **Estimate homography** using RANSAC for robust alignment  
+4. **Warp each image** into a common reference frame  
+5. **Blend images smoothly** to produce a final panoramic view  
 
 ---
 
-## 📁 Repository Structure
+### 🖼 Final Output — Stitched Panorama
+
+Below is the panorama produced by the implemented Python stitching pipeline:
+
+<img src="Part-1/output_panorama.png" width="700">
+
+The stitched image successfully aligns overlapping regions and reconstructs a wide field of view.
+
+---
+
+### 📱 Phone Panorama — Comparison
+
+For comparison, the mobile device’s built-in panorama feature produced the following result:
+
+<img src="Part-1/phone_panorama.jpg" width="700">
+
+The phone’s stitching tends to apply stronger blending, exposure correction, and seam smoothing.  
+The Python implementation focuses on algorithm correctness and manual feature-based alignment.
+
+---
+
+# 📁 Repository Structure
+
