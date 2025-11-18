@@ -1,4 +1,4 @@
-# 📐 CSC 8830 – Homework 1  
+# CSC 8830 – Homework 1  
 ### Real-World Dimension Estimation Using Perspective Projection  
 **Author:** Amir Sabbaghziarani  
 **Course:** CSc 8830 – Computer Vision  
