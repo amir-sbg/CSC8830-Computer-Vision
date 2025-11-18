@@ -37,9 +37,6 @@ Some of the scene images where objects are searched for:
 </p>
 
 
-Example visualization:
-
-<img src="Part-1/scenes/5819145774133087426.jpg" width="400" />
 
 ---
 
