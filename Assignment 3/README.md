@@ -17,7 +17,7 @@ These outputs highlight edge strength, edge orientation, and second-order intens
 ### 📁 Input Example  
 A sample input image from the dataset:
 
-![Gradient Angle](part1/hw3_dataset/photo_5839040925936585610_y.jpg)
+<img src="part1/hw3_dataset/photo_5839040925936585610_y.jpg" width="300"/>
 
 
 ---
@@ -27,15 +27,15 @@ Below are the generated outputs for the above sample image:
 
 #### 🟦 Gradient Angle  
 `part1/output_task1/photo_5839040925936585610_y_grad_ang.png`  
-![Gradient Angle](part1/output_task1/photo_5839040925936585610_y_grad_ang.png)
+<img src="part1/output_task1/photo_5839040925936585610_y_grad_ang.png" width="300"/>
 
 #### 🟩 Gradient Magnitude  
 `part1/output_task1/photo_5839040925936585610_y_grad_mag.png`  
-![Gradient Magnitude](part1/output_task1/photo_5839040925936585610_y_grad_mag.png)
+<img src="part1/output_task1/photo_5839040925936585610_y_grad_mag.png" width="300"/>
 
 #### 🟥 Laplacian of Gaussian (LoG)  
 `part1/output_task1/photo_5839040925936585610_y_log.png`  
-![LoG](part1/output_task1/photo_5839040925936585610_y_log.png)
+<img src="part1/output_task1/photo_5839040925936585610_y_log.png" width="300"/>
 
 ---
 
