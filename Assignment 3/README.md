@@ -67,3 +67,81 @@ All results are saved under:
 ---
 
 
+
+
+
+------------------------
+# Homework 3 – Part 2  
+## Edge Keypoint Detection & Corner Keypoint Detection
+
+### 📌 Task Description
+In this part of the homework, we implement two simple keypoint detectors inspired by the lecture material:
+
+- **EDGE Keypoint Detector**
+  - Uses Sobel gradients.
+  - Selects pixels with strong gradient magnitude.
+  - Applies local non-maximum suppression (3×3 window).
+
+- **CORNER Keypoint Detector**
+  - Based on the Harris corner response.
+  - Thresholds strong responses.
+  - Applies local non-maximum suppression.
+  - Limits number of final corners for cleaner visualization.
+
+Both detectors produce keypoints overlaid on the original image and saved for visualization.
+
+---
+
+### 📁 Input Example  
+
+
+---
+
+### 📤 Output Demo  
+
+#### 🟥 EDGE Keypoints  
+`part2/output_part2/photo_5850306766887914525_y_edge_kp.png`  
+<img src="part2/output_part2/photo_5850306766887914525_y_edge_kp.png" width="300"/>
+
+#### 🟩 CORNER Keypoints  
+`part2/output_part2/photo_5850306766887914525_y_corner_kp.png`  
+<img src="part2/output_part2/photo_5850306766887914525_y_corner_kp.png" width="300"/>
+
+---
+
+### 🧠 Method Summary
+
+#### **EDGE Keypoints**
+- Smooth image with Gaussian blur  
+- Compute Sobel gradients `gx` and `gy`  
+- Compute magnitude `M = sqrt(gx² + gy²)`  
+- Keep pixels above a threshold  
+- Apply 3×3 local maxima filter  
+- Mark surviving pixels as edge keypoints (red)
+
+#### **CORNER Keypoints**
+- Smooth image using heavy Gaussian blur  
+- Compute Harris response `R(x, y)`  
+- Threshold `R > τ * max(R)`  
+- Apply 3×3 local maxima filter  
+- Keep strongest set of corners (green)
+
+---
+
+### 📂 Output Directory  
+
+All results are saved in:
+
+
+
+---
+
+### ✔️ Notes
+- Keypoints are drawn using `cv2.drawKeypoints()` for clear visualization.  
+- Only output visualizations are shown in the README; code is not included.  
+- Parameters (blur size, thresholds, Harris constants, max keypoints) can be tuned to adjust detector sensitivity.  
+
+
+
+
+
