@@ -145,4 +145,113 @@ All results are saved in:
 
 
 
+---------------
+# Homework 3 – Computer Vision Tasks  
+This project includes three classical image-processing tasks implemented using OpenCV:  
+1) Gradient magnitude, gradient angle, and Laplacian of Gaussian  
+2) Edge and corner keypoint detection  
+3) Object boundary extraction (no machine learning allowed)
+
+---
+
+# Part 1 – Gradient Magnitude, Gradient Angle & Laplacian of Gaussian (LoG)
+
+### Task Summary
+For each image in the dataset, we compute:
+- Gradient Magnitude (Sobel-based)
+- Gradient Angle (visualized by mapping angles to 0–180 degrees)
+- Laplacian of Gaussian (Gaussian smoothing + Laplacian filtering)
+
+All outputs are normalized to 0–255 for visualization and saved.
+
+### Input Example
+
+
+
+### Output Demo
+
+**Gradient Angle**  
+`part1/output_task1/photo_5839040925936585610_y_grad_ang.png`  
+<img src="part1/output_task1/photo_5839040925936585610_y_grad_ang.png" width="300"/>
+
+**Gradient Magnitude**  
+`part1/output_task1/photo_5839040925936585610_y_grad_mag.png`  
+<img src="part1/output_task1/photo_5839040925936585610_y_grad_mag.png" width="300"/>
+
+**Laplacian of Gaussian (LoG)**  
+`part1/output_task1/photo_5839040925936585610_y_log.png`  
+<img src="part1/output_task1/photo_5839040925936585610_y_log.png" width="300"/>
+
+---
+
+# Part 2 – Edge & Corner Keypoint Detection
+
+### Task Summary
+Based on methods taught in lecture:
+
+**Edge Keypoints**
+- Gaussian smoothing  
+- Sobel gradients  
+- Gradient magnitude thresholding  
+- Local maxima detection (3×3 non-max suppression)  
+- Visualized in **red**
+
+**Corner Keypoints**
+- Heavier Gaussian smoothing  
+- Harris corner response  
+- Thresholding  
+- Local maxima detection  
+- Top corners kept for visualization  
+- Visualized in **green**
+
+### Input Example
+
+### Output Demo
+
+**EDGE Keypoints**  
+`part2/output_part2/photo_5850306766887914525_y_edge_kp.png`  
+<img src="part2/output_part2/photo_5850306766887914525_y_edge_kp.png" width="300"/>
+
+**CORNER Keypoints**  
+`part2/output_part2/photo_5850306766887914525_y_corner_kp.png`  
+<img src="part2/output_part2/photo_5850306766887914525_y_corner_kp.png" width="300"/>
+
+---
+
+# Part 3 – Object Boundary Extraction (No ML / DL Allowed)
+
+### Task Summary
+A classical image-processing pipeline is used to extract the object boundary:
+
+1. Convert to grayscale and blur (noise reduction)  
+2. Apply Otsu threshold to separate foreground/background  
+3. Perform morphological closing + opening to clean and smooth the mask  
+4. Find contours and choose the **largest contour** as the object  
+5. Create:
+   - A binary mask of the object  
+   - An overlay image with the boundary drawn in **red**
+
+### Input Example
+
+### Output Demo
+
+**Object Boundary Overlay**  
+`part3/output_part3/photo_5850306766887914525_y_boundary.png`  
+<img src="part3/output_part3/photo_5850306766887914525_y_boundary.png" width="300"/>
+
+**Binary Mask**  
+`part3/output_part3/photo_5850306766887914525_y_mask.png`  
+<img src="part3/output_part3/photo_5850306766887914525_y_mask.png" width="300"/>
+
+---
+
+# Notes
+- All tasks rely solely on classical image processing; no deep learning or machine learning methods were used.  
+- The repository includes only the results and explanations; source code is shown separately for reference and is not included in this README.
+
+
+
+
+
+
 
