@@ -303,6 +303,76 @@ The segmentation uses **only classical computer vision** (OpenCV), no machine le
 - No deep learning or machine learning methods were used.
 
 
+----------------------------------
+# Part 5 – Comparison of ArUco-Based Segmentation vs. SAM2 Segmentation
+
+### Task Summary
+In this final experiment, we compare the **classical ArUco-marker-based segmentation** from Part 4 with a **modern foundation model**, **SAM2** (Segment Anything Model v2).  
+The purpose of this comparison is to evaluate:
+
+- How accurately SAM2 can segment a non-rectangular object without markers  
+- How reliable ArUco-based geometric segmentation is when markers lie exactly on the boundary  
+- How the two masks differ in terms of boundary precision and coverage
+
+### Comparison Approach
+1. Use **ArUco-based segmentation** from Part 4 to produce:
+   - Marker visualization
+   - Binary mask
+   - Red boundary overlay
+   - Size estimation of markers
+
+2. Run the **SAM2 model** on the same image to generate an automatic segmentation mask.
+
+3. Create a **comparison overlay** to visualize differences:
+   - White/green region → overlap  
+   - Red region → SAM2 over-segmentation  
+   - Blue region → SAM2 under-segmentation  
+   (depending on your visualization configuration)
+
+### Input Example
+
+
+
+*(SAM2 is run on the same input used for ArUco segmentation)*
+
+---
+
+### Output Demo
+
+**Detected ArUco Markers**  
+`part5/output_aruco_seg_2/4972212806438554467_markers.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_markers.png" width="300"/>
+
+**ArUco Binary Mask**  
+`part5/output_aruco_seg_2/4972212806438554467_mask_aruco.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_mask_aruco.png" width="300"/>
+
+**SAM2 Segmentation Mask**  
+`part5/output_aruco_seg_2/4972212806438554467_mask_sam2.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_mask_sam2.png" width="300"/>
+
+**ArUco Boundary Overlay (Red Hull)**  
+`part5/output_aruco_seg_2/4972212806438554467_boundary_aruco.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_boundary_aruco.png" width="300"/>
+
+**ArUco Boundary + Marker Size Visualization**  
+`part5/output_aruco_seg_2/4972212806438554467_size_aruco.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_size_aruco.png" width="300"/>
+
+**ArUco vs SAM2 Comparison Overlay**  
+`part5/output_aruco_seg_2/4972212806438554467_compare_overlay.png`  
+<img src="part5/output_aruco_seg_2/4972212806438554467_compare_overlay.png" width="300"/>
+
+---
+
+### Observations (General Guidelines You Can Add to Your Report)
+- ArUco-based segmentation tends to produce **very precise geometric boundaries**, especially when markers are placed exactly on the object perimeter.  
+- SAM2 may **over-segment** or **under-segment** depending on texture, lighting, and background clutter.  
+- SAM2 is fully automatic, while ArUco segmentation requires marker placement but provides a more controlled result.  
+- The comparison overlay visually highlights **regions of discrepancy**, helping evaluate segmentation quality.
+
+
+
 
 
 
