@@ -93,6 +93,7 @@ Both detectors produce keypoints overlaid on the original image and saved for vi
 ---
 
 ### 📁 Input Example  
+<img src="part2/hw3-part2-dataset/photo_5850306766887914525_y.jpg" width="300"/>
 
 
 ---
