@@ -17,7 +17,7 @@ These outputs highlight edge strength, edge orientation, and second-order intens
 ### 📁 Input Example  
 A sample input image from the dataset:
 
-
+![Gradient Angle](part1/hw3_dataset/photo_5839040925936585610_y.jpg)
 
 
 ---
