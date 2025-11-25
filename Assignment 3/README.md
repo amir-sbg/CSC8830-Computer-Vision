@@ -252,6 +252,61 @@ A classical image-processing pipeline is used to extract the object boundary:
 
 
 
+# Part 4 – Object Segmentation of a Non-Rectangular Object Using ArUco Markers
+
+### Task Summary
+In this final part, we segment a **non-rectangular object** by placing **ArUco markers along its physical boundary** and capturing multiple images from various angles and distances.  
+The segmentation uses **only classical computer vision** (OpenCV), no machine learning or deep learning.
+
+### Method Overview
+1. Convert image to grayscale and apply light smoothing  
+2. Detect ArUco markers using OpenCV (trying multiple dictionaries automatically)  
+3. Gather all detected marker corner points  
+4. Compute a **convex hull** over all marker points → this forms the object boundary  
+5. Generate:
+   - An image with detected markers drawn  
+   - A binary object mask  
+   - An overlay showing the red boundary  
+   - A visualization of marker sizes (px), estimated from their corner geometry  
+
+### Input Example  
+
+**Input Image**  
+<img src="part4/dataset/4972212806438554464.jpg" width="300"/>
+
+---
+
+### Output Demo  
+
+**Detected ArUco Markers**  
+`part4/output/4972212806438554464_markers.png`  
+<img src="part4/output/4972212806438554464_markers.png" width="300"/>
+
+**Binary Mask of Segmented Object**  
+`part4/output/4972212806438554464_mask.png`  
+<img src="part4/output/4972212806438554464_mask.png" width="300"/>
+
+**Object Boundary Overlay (Red Hull)**  
+`part4/output/4972212806438554464_boundary.png`  
+<img src="part4/output/4972212806438554464_boundary.png" width="300"/>
+
+**Object Boundary + Marker Size Estimates**  
+`part4/output/4972212806438554464_size.png`  
+<img src="part4/output/4972212806438554464_size.png" width="300"/>
+
+---
+
+### Notes
+- Uses OpenCV’s built-in ArUco detection (supports both classic ArUco and AprilTag dictionaries depending on your OpenCV build).  
+- Automatically selects the dictionary that detects the **largest number of markers**.  
+- Convex hull segmentation provides a clean, robust boundary even when images are captured from different angles.  
+- No deep learning or machine learning methods were used.
+
+
+
+
+
+
 
 
 
