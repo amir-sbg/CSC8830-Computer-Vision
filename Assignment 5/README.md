@@ -20,6 +20,12 @@ The script detects markers frame-by-frame and builds a tight bounding box around
 `demo-aruco.png`  
 <img src="demo-aruco.png" width="350"/>
 
-### Run Command
-```bash
-python hw5.py --mode aruco
+
+### Demo – Marker Tracking  
+`demo-aruco.png`  
+<img src="demo-marker.png" width="350"/>
+
+### Demo – SAM2 Tracking  
+`demo-aruco.png`  
+<img src="demo-npz.png" width="350"/>
+<img src="demo-sam.png" width="350"/>
