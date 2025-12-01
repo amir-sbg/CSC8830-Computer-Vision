@@ -1,1 +1,1 @@
-# CSC8830-Computer-Vision Homework 7
+# ComputerVision-csc8830-hw7
