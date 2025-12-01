@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="grid">
+  <a class="card" href="{{ url_for('hw1_page') }}">
+    <h2>HW1</h2>
+    <p>Interactive distance estimation (JS app).</p>
+  </a>
+  <a class="card" href="{{ url_for('hw2_page') }}">
+    <h2>HW2</h2>
+    <p>Template matching and blurring (Flask UI).</p>
+  </a>
+  <a class="card" href="{{ url_for('hw3_page') }}">
+    <h2>HW3</h2>
+    <p>Multi-part CV pipeline dashboard (Flask UI).</p>
+  </a>
+  <a class="card" href="{{ url_for('hw4_page') }}">
+    <h2>HW4</h2>
+    <p>Panorama stitching and SIFT from scratch (Flask UI).</p>
+  </a>
+  <a class="card" href="{{ url_for('hw5_page') }}">
+    <h2>HW5</h2>
+    <p>Object tracking demos (launch local OpenCV windows).</p>
+  </a>
+  <a class="card" href="{{ url_for('hw7_page') }}">
+    <h2>HW7</h2>
+    <p>Stereo disparity and Pose (static pages).</p>
+  </a>
+</section>
+{% endblock %}
+
+

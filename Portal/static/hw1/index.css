@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f1a1e;
+  color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h2 {
+  margin-top: 1em;
+  font-weight: 500;
+  color: #00e6ac;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.canvas-wrapper {
+  position: relative;
+  border: 1px solid #00e6ac;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 230, 172, 0.3);
+}
+
+img, canvas {
+  max-width: 80vw;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.upload-btn {
+  background-color: #00e6ac;
+  color: #0f1a1e;
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;          
+}
+
+.upload-btn:hover {
+  background-color: #1affc6;
+}
+
+.upload-btn input[type="file"] {
+  display: none;
+}
+
+

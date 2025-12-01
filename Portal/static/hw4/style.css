@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 24px;
+    background: #f7fafb;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.column {
+    background: #fff;
+    border: 1px solid #e6e9ee;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+.column h3 { margin-top: 0; }
+#part1_result img, #part2_result img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>HW2 – Template Matching Web App</h2>
+<link rel="stylesheet" href="{{ url_for('static', filename='hw2/style.css') }}">
+
+<div class="upload-section">
+  <input type="file" id="imageInput" accept="image/*">
+  <button onclick="uploadImage()">Run Template Matching</button>
+</div>
+
+<div class="images">
+  <div>
+    <h3>Original</h3>
+    <img id="originalImage" class="img-box">
+  </div>
+  <div>
+    <h3>Blurred Output</h3>
+    <img id="outputImage" class="img-box">
+  </div>
+  </div>
+
+<script src="{{ url_for('static', filename='hw2/script.js') }}"></script>
+{% endblock %}
+
+

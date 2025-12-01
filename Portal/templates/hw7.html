@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>HW7 – Static Demos</h2>
+<ul>
+  <li><a href="{{ url_for('static', filename='hw7/part1/index.html') }}" target="_blank">Part 1 – Stereo Disparity</a></li>
+  <li><a href="{{ url_for('static', filename='hw7/part3/pose.html') }}" target="_blank">Part 3 – Pose</a></li>
+  <li><a href="{{ url_for('static', filename='hw7/part2/hw7_part2.html') }}" target="_blank">Part 2 – Report (HTML)</a></li>
+{% endblock %}
+
+
