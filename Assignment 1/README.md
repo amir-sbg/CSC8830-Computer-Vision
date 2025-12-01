@@ -3,7 +3,7 @@
 **Author:** Amir Sabbaghziarani  
 **Course:** CSc 8830 – Computer Vision  
 **Instructor:** Dr. Ashwin Ashok  
-**Semester:** Spring 2026  
+**Semester:** Spring 2025  
 
 ---
 
